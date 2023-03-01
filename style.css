@@ -1,0 +1,198 @@
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: fixed rgb(2, 2, 2);
+}
+
+.container{
+    margin-top: 20%;
+    position: relative;
+    width: 450px;
+    aspect-ratio: 1/1;
+   transform-origin: 50% 50%;
+   animation: op 0.6s ease-in;
+}
+.cnt{
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   transform-origin: 50% 50%;
+}
+
+.circle{
+    transition-property: margin,width;
+    transition-duration: 1s;
+    background-image: -webkit-linear-gradient(90deg, rgb(77,162,247), rgb(119, 1181, 248) );
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 500px;
+    position: absolute;
+    opacity: 80%;
+    
+}
+
+.c1{
+    position: static;
+    margin-bottom: 5%;
+    margin-left: -33%;
+    width: 27%;
+    opacity: 60%;
+    background-image: -webkit-linear-gradient(90deg, rgb(90, 197, 250,1), rgb(72, 208, 242,0.6) );
+
+
+}
+
+.c2{
+    position: static;
+    margin-bottom: 33%;
+    margin-left: -22%;
+    width: 20%;
+    opacity: 80%;
+    background-image: -webkit-linear-gradient(300deg, rgb(90, 205, 250),rgb(90, 205, 250,0.6) 60%, rgb(72, 208, 242,0.1) 80% );
+
+
+}
+
+.c3{
+    offset-anchor: 50% 50%;
+    position: static;
+    margin-bottom: 27%;
+    margin-left: 18%;
+    width: 37%;
+    opacity: 100%;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 70% );
+
+
+}
+.c4{
+    position: static;
+    margin-bottom: 5%;
+    margin-left: 52%;
+    width: 27%;
+    z-index: -10;
+    opacity: 100%;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 150% );
+
+
+}
+
+.c5{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    bottom: 39%;
+    left: 20%;
+    border-radius: 0px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%; 
+    background: unset;
+    opacity: 100%;
+    z-index: 10;
+    background: radial-gradient( circle at 50% 100%, rgb(90, 221, 250),rgb(90, 221, 250,1) 25%, rgb(90, 197, 250,0) 50% );
+    transition: unset;
+    animation: op 0.6s ease-in;
+}
+@keyframes op {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+.active .cnt{
+   
+    animation: rotate 10s linear infinite 0.3s;
+
+}
+
+.active .cn2{
+   
+    
+}
+.active .cn3{
+    
+    transition: all  1s ;
+}
+.active .cn4{
+   
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.active .c1{
+    width: 25%;
+    margin-left: -70%;
+    margin-top: 0%;
+    transition-property: margin,width,opacity;
+    transition-duration: 1s;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 150% );
+    opacity: 80%;
+}
+
+.active .c2{
+    opacity: 90%;
+    width: 25%;
+    margin-left: 0%;
+    margin-top: -37%;
+    transition-property: opacity,margin,width;
+    transition-duration: 1s;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 150% );
+
+}
+
+.active .c3{
+    position:initial;
+    width: 37%;
+    margin: 0;
+    transition-property: margin,width;
+    transition-duration: 1s;
+}
+
+.active .c4{
+    width: 25%;
+    margin-left: 70%;
+    margin-top: 0%;
+    transition-property: margin,width;
+    transition-duration: 1s;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 150% );
+
+}
+.active .c5{
+    aspect-ratio: 1/1;
+    position: static;
+    margin-bottom: -70%;
+    margin-left: 0%;
+    width: 25%;
+    height: 25%;
+    z-index: -10;
+    opacity: 100%;
+    border-radius: 500px;
+    background-image: -webkit-linear-gradient(180deg, rgb(77, 168, 239,1), rgb(74, 209, 246,0.8) 150% );
+    animation: c5 1s;
+}
+ @keyframes c5 {
+    0%{
+        opacity: 20%;
+    margin-bottom: 0%;
+    margin-left: 10%;
+    }
+    100%{
+        opacity: 100%;
+        margin-bottom: -70%;
+        margin-left: 0%;
+    }
+ }
